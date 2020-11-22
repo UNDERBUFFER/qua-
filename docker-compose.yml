@@ -13,6 +13,8 @@ services:
 
   application:
     image: node-qua
+    environment:
+      MONGO_CONNECTION_STRING: mongodb://root:toor@mongo:27017
     ports:
       - 3000:3000
     volumes:
