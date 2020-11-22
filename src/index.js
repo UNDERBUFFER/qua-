@@ -16,6 +16,7 @@ const MONGOOSE_SETTINGS = {
 }
 
 app.set('views', path.join(__dirname, '/views'))
+app.use('/static', express.static( path.join(__dirname, '/public') ))
 app.use('/', MainRouter)
 
 mongoose.connect(MONGO_CONNECTION_STRING, MONGOOSE_SETTINGS, (error) => {
