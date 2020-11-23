@@ -58,3 +58,55 @@
 .tag:hover {
     background-color: mediumturquoise;
 }
+
+#info {
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    font-size: 40px;
+    width: 60%;
+    height: 10%;
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 35%;
+    border-radius: 10px;
+    border: 4px outset rgb(52, 47, 150);
+    background-color: dimgray;
+}
+
+#info:hover {
+    background-color: red;
+}
+
+#questions-area {
+    border: 6px solid hotpink;
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 30%;
+    border-radius: 5%;
+    text-align: right;
+    font-size: 30px;
+    line-height: 2000%;
+    background-color: seashell;
+}
+
+.question {
+    background-color: white;
+    margin-top: 2px;
+    margin-left: 2%;
+    height: 31%;
+    width: 95%;
+    line-height: 80px;
+    border: 4px solid orange;
+    border-radius: 5%;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px black, 0 0 1em gray;
+}
+
+.question:hover {
+    color: white;
+    background-color: skyblue;
+}

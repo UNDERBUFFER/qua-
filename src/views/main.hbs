@@ -21,5 +21,27 @@
         <a href="/" class="tag">Frontend</a>
         <a href="/" class="tag">ALL</a>
     </div>
+    <div onmouseout="oldSchool()" onmouseover="changeFlow()" id="info"></div>
+    <div id="questions-area">
+        {{!-- TODO: tags in question --}}
+        {{!-- <div class='question'>факs</div> --}}
+        {{!-- <div class='question'>оу</div> --}}
+        {{!-- <div class='question'>ещкере</div> --}}
+    </div>
+    <script>
+        const memText = "QUA🐸 Traceback Flow😎"
+        oldSchool()
+        function oldSchool () {
+            document.getElementById('info').innerText = memText
+        }
+        function changeFlow () {
+            document.getElementById('info').innerText = memText.slice(0, -2) + '🙈'
+        }
+    </script>
+    <script>
+        const questionsArea = document.getElementById('questions-area')
+        if (questionsArea.children.length == 0)
+            questionsArea.innerText = "while questions don't exist ;( ..."
+    </script>
 </body>
 </html>
