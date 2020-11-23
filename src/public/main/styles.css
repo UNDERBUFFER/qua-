@@ -6,4 +6,28 @@
     top: 0;
     background-color: aquamarine;
     height: 60px;
+    border: 4px solid grey;
+}
+
+#menu {
+    display: table;
+    width: 100%;
+    table-layout: fixed; 
+}
+
+div#menu a {
+    color: teal;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+    top: 0px;
+    display: table-cell;
+    border: 4px groove greenyellow;
+    height: 60px;
+    text-decoration: none;
+}
+
+div#menu a:hover {
+    background-color: hsl(160, 69%, 62%);
+    color: white;
 }
