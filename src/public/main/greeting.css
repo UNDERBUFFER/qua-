@@ -1,0 +1,19 @@
+
+#info {
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    font-size: 40px;
+    width: 60%;
+    height: 10%;
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 35%;
+    border-radius: 10px;
+    border: 4px outset rgb(52, 47, 150);
+    background-color: dimgray;
+}
+
+#info:hover {
+    background-color: red;
+}

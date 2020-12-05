@@ -1,6 +1,7 @@
 
 const express = require('express')
 const MainRouter = require('./routers/Main')
+const AuthRouter = require('./routers/Auth')
 const mongoose = require("mongoose")
 const path = require('path')
 
@@ -17,7 +18,8 @@ const MONGOOSE_SETTINGS = {
 
 app.set('views', path.join(__dirname, '/views'))
 app.use('/static', express.static( path.join(__dirname, '/public') ))
-app.use('/', MainRouter)
+app.use('/auth', AuthRouter)
+app.use('/', MainRouter) // TODO: + /main
 
 mongoose.connect(MONGO_CONNECTION_STRING, MONGOOSE_SETTINGS, (error) => {
     if (error) console.error(error)
