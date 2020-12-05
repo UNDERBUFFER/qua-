@@ -1,10 +1,10 @@
 
 class Main {
     static get(request, response) {
-        response.render('main.hbs');
+        response.render('main/main.hbs');
     }
     static post(request, response) {
-        response.render('main.hbs');
+        response.render('main/main.hbs');
     }
 }
 
