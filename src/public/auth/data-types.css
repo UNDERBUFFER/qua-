@@ -16,12 +16,12 @@
 
 #entrance .data-button {
     height: 25%;
-    margin-top: 4%;
+    margin-top: 3.5%;
 }
 
 #registration .data-button {
     height: 15%;
-    margin-top: 4%;
+    margin-top: 3.5%;
 }
 
 .data-button::placeholder {
