@@ -1,0 +1,9 @@
+
+#entrance {
+    position: absolute;
+    border: 10px solid darkblue;
+    height: 50%;
+    top: 20%;
+    width: 40%;
+    left: 5%;
+}

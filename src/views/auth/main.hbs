@@ -1,1 +1,33 @@
-<b>hello</b>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='/static/main/header.css'>
+    <link rel='stylesheet' href='/static/auth/entrance.css'>
+    <link rel='stylesheet' href='/static/auth/registration.css'>
+    <link rel='stylesheet' href='/static/auth/data-types.css'>
+</head>
+    <div id="header">
+        <div id="menu">
+            <a href="/" class="menu-link">Главная</a>
+            <a href="/" class="menu-link">Чатик</a>
+            <a href="https://github.com/UNDERBUFFER/qua🐸" class="menu-link">Код на Github</a>
+            <a href="/auth" class="menu-link">Войти</a> <!-- на js если пользователь зашел заменить на имя -->
+        </div>
+    </div>
+    <div id="entrance">
+        <input type="email" name="entrance.email" class="data-button" placeholder="YOUR MAIL" value="">
+        <input type="password" name="entrance.password" class="data-button" placeholder="MAYBE YOUR PASSWORD" value="">
+        <input type="button" name="entrance.done" class="data-button" id="entrance-done" value="SEND!">
+    </div>
+    <div id="registration">
+        <input type="text" name="registration.name" class="data-button" placeholder="YOUR NAME">
+        <input type="text" name="registration.nickname" class="data-button" placeholder="YOUR NICKNAME">
+        <input type="email" name="registration.email" class="data-button" placeholder="YOUR MAIL">
+        <input type="password" name="registration.password" class="data-button" placeholder="YOUR PASSWORD">
+        <input type="button" name="registration.done" class="data-button" id="registration-done" value="SEND!">
+    </div>
+</body>
+</html>
