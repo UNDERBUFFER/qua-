@@ -10,7 +10,9 @@ class Registration extends Auth {
             if (error) response.send(error)
             else {
                 login(request, response, user)
-                response.send('ok')
+                response.json({
+                    status: 'ok'
+                })
             }
         })
     }

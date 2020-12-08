@@ -30,7 +30,9 @@ async function createRequest(action='registration') {
         },
         body: JSON.stringify( parseForm(action) )
     })
-    const text = await response.text()
-    console.log(text)
+    const jsonData = await response.json()
+    if (jsonData.status == "ok") document.location.reload(true)
+    else console.log(jsonData)
+    return true
 }
 

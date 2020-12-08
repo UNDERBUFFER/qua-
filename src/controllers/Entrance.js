@@ -7,13 +7,12 @@ class Entrance extends Auth {
         console.log(request.body)
         const promise = authenticate(request.body.email, request.body.password)
         promise.then(user => {
-            console.log('ok')
             login(request, response, user)
-            response.send('ok')
+            response.json({
+                status: 'ok'
+            })
         })
         promise.catch(error => {
-            console.log('fff')
-            console.log(error)
             response.send(error)
         })
     }
