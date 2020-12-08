@@ -5,8 +5,9 @@ const express = require('express')
 const mongoose = require("mongoose")
 const path = require('path')
 
-const MainRouter = require('./routers/Main')
 const AuthRouter = require('./routers/Auth')
+const MainRouter = require('./routers/Main')
+const MIDDLEWARES = require('./middlewares/main')
 
 const app = express()
 const MONGO_CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING
@@ -25,6 +26,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
 }))
+MIDDLEWARES.forEach(middleware => app.use(middleware))
 
 app.use('/static', express.static( path.join(__dirname, '/public') ))
 app.use('/auth', AuthRouter)
