@@ -23,7 +23,7 @@ function parseForm(action='registration') {
 
 
 async function createRequest(action='registration') {
-    const response = await fetch('/auth', {
+    const response = await fetch(`/auth/${action}`, {
         method: 'POST',
         headers: {
             'Content-type': 'application/json; charset=utf-8'
