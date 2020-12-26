@@ -8,17 +8,9 @@ const path = require('path')
 const AuthRouter = require('./routers/Auth')
 const MainRouter = require('./routers/Main')
 const MIDDLEWARES = require('./middlewares/main')
+const settings = require('./settings')
 
 const app = express()
-const MONGO_CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING
-const MONGOOSE_SETTINGS = {
-    poolSize: 10, 
-    bufferMaxEntries: 0, 
-    reconnectTries: 5000, 
-    useNewUrlParser: true, 
-    useUnifiedTopology: true, 
-    useNewUrlParser: true
-}
 
 app.set('views', path.join(__dirname, '/views'))
 app.use(cookieParser())
@@ -33,7 +25,7 @@ app.use('/auth', AuthRouter)
 app.use('/main', MainRouter)
 app.use('/', MainRouter)
 
-mongoose.connect(MONGO_CONNECTION_STRING, MONGOOSE_SETTINGS, (error) => {
+mongoose.connect(settings.MONGO_CONNECTION_STRING, settings.MONGOOSE_SETTINGS, (error) => {
     if (error) console.error(error)
     else app.listen(3000, () => {
         console.log("Server is waiting for a connection...")

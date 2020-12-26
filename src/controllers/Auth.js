@@ -1,7 +1,8 @@
 
 class Auth {
     static get(request, response) {
-        response.render('auth/main.hbs')
+        if (request.user) response.redirect('/')
+        else response.render('auth/main.hbs')
     }
 }
 

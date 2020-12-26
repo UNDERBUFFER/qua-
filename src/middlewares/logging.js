@@ -1,6 +1,6 @@
 
 function loggingMiddleware(request, response, next) {
-    console.log({
+    console.debug({
         method: request.method.toUpperCase(),
         url: request.originalUrl,
         status: response.statusCode,

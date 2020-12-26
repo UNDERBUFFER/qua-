@@ -1,4 +1,5 @@
 
+getUser()
 
 function parseForm(action='registration') {
     const dataArray = [...document.getElementsByClassName('data-button')]
@@ -36,3 +37,20 @@ async function createRequest(action='registration') {
     return true
 }
 
+
+async function getUser() {
+    const response = await fetch(`/auth/user`, {
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json; charset=utf-8'
+        }
+    })
+    const jsonData = await response.json()
+    console.log(jsonData)
+    if (jsonData.userIsAuthorized) {
+        const div = document.getElementById('login-link')
+        div.innerText = `${jsonData.user.nickname} (Выйти)`
+        div.href = '/auth/logout'
+    }
+    return true
+}

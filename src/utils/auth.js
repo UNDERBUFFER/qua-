@@ -10,6 +10,12 @@ function login(request, response, user) {
 }
 
 
+function logout(request, response) {
+    response.clearCookie('id')
+    request.user = null
+}
+
+
 function authenticate(email, password) {
     return new Promise((resolve, reject) => {
         User.find({ email, password }, (error, result) => {
@@ -23,4 +29,4 @@ function authenticate(email, password) {
 }
 
 
-module.exports = { authenticate, login }
+module.exports = { authenticate, login, logout }
