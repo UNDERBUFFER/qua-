@@ -26,10 +26,12 @@ function addFormForQuestion(div) {
     const title = document.createElement('input')
     title.form = 'fact'
     title.type = 'text'
+    title.id = 'title'
     title.className = "adding-question"
 
     const description = document.createElement('textarea')
     description.form = 'fact'
+    description.id = 'description'
     description.className = "adding-question"
 
     const submit = document.createElement('input')
