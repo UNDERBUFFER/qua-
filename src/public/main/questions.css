@@ -31,3 +31,18 @@
     color: white;
     background-color: skyblue;
 }
+
+.adding-question {
+    border-radius: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 60%;
+    height: 20%;
+    text-align: center;
+}
+
+textarea.adding-question {
+    resize: none;
+}
