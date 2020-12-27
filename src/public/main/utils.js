@@ -20,22 +20,24 @@ function setTextWithOnMouse() {
 
 function addFormForQuestion(div) {
     const form = document.createElement('form')
-    form.method = 'POST'
+    form.method = 'post'
     form.id = "fact"
+    form.action = "/question"
+    form.enctype = "application/x-www-form-urlencoded"
 
     const title = document.createElement('input')
-    title.form = 'fact'
+    title.setAttribute('form', 'fact')
     title.type = 'text'
-    title.id = 'title'
+    title.name = 'title'
     title.className = "adding-question"
 
     const description = document.createElement('textarea')
-    description.form = 'fact'
-    description.id = 'description'
+    description.setAttribute('form', 'fact')
+    description.name = 'description'
     description.className = "adding-question"
 
     const submit = document.createElement('input')
-    submit.form = 'fact'
+    submit.setAttribute('form', 'fact')
     submit.type = 'submit'
     submit.value = 'send!'
     submit.className = "adding-question"
