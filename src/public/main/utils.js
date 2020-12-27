@@ -9,11 +9,11 @@ if (questionsArea.children.length == 0)
 
 
 function setStartText() {
-    document.getElementById('info').innerText = memText
+    document.getElementById('info').value = memText
 }
 
 
 function setTextWithOnMouse() {
-    document.getElementById('info').innerText = memText.slice(0, -2) + '🙈'
+    document.getElementById('info').value = `QUA🐸 Задать вопрос😎`
 }
 
