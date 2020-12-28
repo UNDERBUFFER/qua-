@@ -1,0 +1,41 @@
+
+.answer-entity {
+    display: block;
+    border: 4px solid indigo;
+    border-radius: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 25%;
+    text-align: center;
+    margin-top: 6%;
+    font-size: 20px;
+}
+
+textarea.answer-entity {
+    resize: none;
+    font-size: 15px;
+}
+
+div.answer-entity {
+    font-size: 30px;
+    line-height: 300%;
+    background-color: lightblue;
+    color: white;
+}
+
+#answers-area {
+    position: absolute;
+    margin-left: 35%;
+    width: 60%;
+    border: 4px solid black;
+    margin-top: 42%;
+}
+
+.answer {
+    width: 100%;
+    height: 80px;
+    border: 4px solid rgb(0, 48, 205);
+    margin-top: 40px;
+    text-align: center;
+}

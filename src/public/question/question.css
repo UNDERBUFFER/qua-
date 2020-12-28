@@ -1,0 +1,22 @@
+
+#question-title {
+    line-height: 70px;
+    height: 10%;
+    margin-top: 13%;
+    border: 4px outset rgb(52, 47, 150);
+}
+
+#question-text {
+    height: 30%;
+    margin-top: 20%;
+    border: 4px outset rgb(152, 28, 143);
+}
+
+.question-entity {
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    width: 60%;
+    margin-left: 35%;
+    border-radius: 10px;
+}

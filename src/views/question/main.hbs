@@ -7,6 +7,8 @@
     <link rel='stylesheet' href='/static/main/header.css'>
     <link rel='stylesheet' href='/static/main/left-panel.css'>
     <link rel='stylesheet' href='/static/question/adding.css'>
+    <link rel='stylesheet' href='/static/question/answer.css'>
+    <link rel='stylesheet' href='/static/question/question.css'>
 </head>
     <div id="header">
         <div id="menu">
@@ -18,7 +20,23 @@
     </div>
     <div id="left-panel">
         <form id="fact" action="/answer" method="post"></form>
+        <div class="answer-entity">Ваш ответ</div>
+        <textarea name="text" class="answer-entity" form="fact"></textarea>
+        <input type="submit" class="answer-entity" value="Отправить" form="fact">
+    </div>
+    <div id="question-title" class="question-entity"></div>
+    <div id="question-text" class="question-entity"></div>
+    <div id="answers-area">
+        {{!-- <div class="answer"></div> <!--todo-->
+        <div class="answer"></div> <!--todo-->
+        <div class="answer"></div> <!--todo-->
+        <div class="answer"></div> <!--todo-->
+        <div class="answer"></div> <!--todo-->
+        <div class="answer"></div> <!--todo-->
+        <div class="answer"></div> <!--todo-->
+        <div class="answer"></div> <!--todo--> --}}
     </div>
     <script src="/static/auth/utils.js"></script>
+    <script src="/static/question/utils.js"></script>
 </body>
 </html>
