@@ -1,12 +1,8 @@
 
 const memText = "QUA🐸 Traceback Flow😎"
-const questionsArea = document.getElementById('questions-area')
 
 setStartText()
-
-if (questionsArea.children.length == 0)
-    questionsArea.innerText = "while questions don't exist ;( ..."
-
+getQuestions()
 
 function setStartText() {
     document.getElementById('info').value = memText
@@ -50,6 +46,42 @@ function addFormForQuestion(div) {
     div.appendChild(title)
     div.appendChild(description)
     div.appendChild(submit)
+
+    return true
+}
+
+
+async function getQuestions() {
+    const questionsArea = document.getElementById('questions-area')
+
+    const response = await fetch('/question/all-questions', {
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json; charset=utf-8'
+        }
+    })
+
+    let jsonData = await response.json()
+    jsonData = jsonData.slice(jsonData.length - 3)
+
+    for (let i = 0; i < jsonData.length; i++) {
+        let secondResponse = await fetch(`/question/${jsonData[i]._id}/author-info`, {
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json; charset=utf-8'
+            }
+        })
+        jsonData[i].author = await secondResponse.json()
+
+        let a = document.createElement('a')
+        a.className = 'question'
+        a.innerHTML = `<b>${jsonData[i].author.nickname}</b>: ${jsonData[i].title}`
+        a.href = `/question/${jsonData[i]._id}`
+        questionsArea.appendChild(a)
+    }
+
+    if (questionsArea.children.length == 0)
+        questionsArea.innerText = "while questions don't exist ;( ..."
 
     return true
 }

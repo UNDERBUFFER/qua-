@@ -46,7 +46,6 @@ async function getUser() {
         }
     })
     const jsonData = await response.json()
-    console.log(jsonData)
     if (jsonData.userIsAuthorized) {
         const div = document.getElementById('login-link')
         div.innerText = `${jsonData.user.nickname} (Выйти)`
