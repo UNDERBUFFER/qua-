@@ -16,6 +16,7 @@ Router.get('/:id', Question.get)
 Router.get('/:id/author-info', AuthorInfo.get)
 Router.get('/:id/question-info', QuestionInfo.get)
 Router.post('/:id', Answer.post)
+Router.get('/:id/:answerId/author-info', AuthorInfo.get)
 Router.get('/:id/all-answers', AnswerCollection.get)
 
 module.exports = Router
