@@ -2,6 +2,8 @@
 #question-title {
     height: 30%;
     border: 4px outset rgb(52, 47, 150);
+    font-size: 35px;
+    line-height: 250%;
 }
 
 #question-text {
