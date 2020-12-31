@@ -11,6 +11,7 @@ const LogicRouter = require('./routers/Logic')
 const MIDDLEWARES = require('./middlewares/main')
 const settings = require('./settings')
 
+
 const app = express()
 
 app.set('views', path.join(__dirname, '/views'))
@@ -21,11 +22,13 @@ app.use(bodyParser.urlencoded({
 }))
 MIDDLEWARES.forEach(middleware => app.use(middleware))
 
+
 app.use('/static', express.static( path.join(__dirname, '/public') ))
 app.use('/auth', AuthRouter)
 app.use('/main', MainRouter)
 app.use('/question', LogicRouter)
 app.use('/', MainRouter)
+
 
 mongoose.connect(settings.MONGO_CONNECTION_STRING, settings.MONGOOSE_SETTINGS, (error) => {
     if (error) console.error(error)
