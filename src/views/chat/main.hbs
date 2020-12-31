@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    {{!-- <script src="/static/chat/socket.io.js"></script> --}}
-    {{!-- <script src="/static/socket.io/socket.io.js"></script> --}}
     <link rel='stylesheet' href='/static/main/header.css'>
+    <link rel='stylesheet' href='/static/chat/message.css'>
 </head>
     <div id="header">
         <div id="menu">
@@ -15,6 +14,12 @@
             <a href="https://github.com/UNDERBUFFER/qua🐸" class="menu-link">Код на Github</a>
             <a href="/auth" class="menu-link" id="login-link">Войти</a>
         </div>
+    </div>
+    <div id="message-area">
+        <textarea class="message-entity" name="message-text" id="message-text"></textarea>
+        <button class="message-entity" id="message-send">
+            <div id="message-send-text">></div>
+        </button>
     </div>
     <script src="/static/auth/utils.js"></script>
     <script src="/static/chat/utils.js"></script>
