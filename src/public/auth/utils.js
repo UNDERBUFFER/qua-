@@ -51,5 +51,5 @@ async function getUser() {
         div.innerText = `${jsonData.user.nickname} (Выйти)`
         div.href = '/auth/logout'
     }
-    return true
+    return jsonData
 }

@@ -1,0 +1,24 @@
+
+#messages {
+    position: absolute;
+    width: 77%;
+    top: 40%;
+    margin-left: 9%;
+    height: 20%;
+}
+
+.message, .user-message {
+    margin-left: 21%;
+    height: 100%;
+    margin-top: 10%;
+    border: 8px solid turquoise;
+    border-radius: 4%;
+    font-size: 40px;
+    text-align: center;
+}
+
+.user-message {
+    margin-right: 21%;
+    margin-left: 0%;
+    border: 8px solid royalblue;
+}
