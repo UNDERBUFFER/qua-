@@ -4,6 +4,8 @@ const cookieParser = require('cookie-parser')
 const express = require('express')
 const mongoose = require("mongoose")
 const path = require('path')
+const http = require("http")
+const WebSocket = require('ws')
 
 const AuthRouter = require('./routers/Auth')
 const MainRouter = require('./routers/Main')
@@ -30,9 +32,17 @@ app.use('/question', LogicRouter)
 app.use('/', MainRouter)
 
 
+const server = http.createServer(app)
+
 mongoose.connect(settings.MONGO_CONNECTION_STRING, settings.MONGOOSE_SETTINGS, (error) => {
     if (error) console.error(error)
-    else app.listen(3000, () => {
+    else server.listen(3000, () => {
         console.log("Server is waiting for a connection...")
     })
+})
+
+const wss = new WebSocket.Server({ server, path: '/chat' })
+
+wss.on('connection', socket => {
+    console.log('ok')
 })
