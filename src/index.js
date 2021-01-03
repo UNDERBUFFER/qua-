@@ -5,7 +5,7 @@ const express = require('express')
 const mongoose = require("mongoose")
 const path = require('path')
 const http = require("http")
-const WebSocket = require('ws')
+const WebSocket = require('./utils/WebSocketServer')
 
 const AuthRouter = require('./routers/Auth')
 const ChatRouter = require('./routers/Chat')
@@ -43,8 +43,5 @@ mongoose.connect(settings.MONGO_CONNECTION_STRING, settings.MONGOOSE_SETTINGS, (
     })
 })
 
-const wss = new WebSocket.Server({ server, path: '/chat' })
+new WebSocket( { server, path: '/chat' } ).main()
 
-wss.on('connection', socket => {
-    console.log('ok')
-})
